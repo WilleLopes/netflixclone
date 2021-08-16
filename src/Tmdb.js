@@ -29,7 +29,7 @@ export default {
             {
                 slug: 'trending',
                 title: 'Recomendados para Você',
-                items: await basicFetch(`/trending/all/week`)
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'topRated',
