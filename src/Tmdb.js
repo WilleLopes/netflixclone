@@ -32,9 +32,9 @@ export default {
                 items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'topRated',
+                slug: 'toprated',
                 title: 'Em Alta',
-                items: []
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'action',
