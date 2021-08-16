@@ -24,12 +24,12 @@ export default {
             {
                 slug: 'originals',
                 title: 'Originais da Netflix',
-                items: []
+                items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'trending',
                 title: 'Recomendados para Você',
-                items: []
+                items: await basicFetch(`/trending/all/week`)
             },
             {
                 slug: 'topRated',
