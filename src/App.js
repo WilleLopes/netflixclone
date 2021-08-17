@@ -9,15 +9,21 @@ export default () => {
     const loadAll = async () => {
      // Pegando a lista Total
      let list = await Tmdb.getHomeList();
-     console.log("essa é a lista de filmes", list)
+     setMovieList(list);
 
     }
     loadAll();
   },[])
 
   return (
-    <div>
-      olá mundo!
+    <div className="page">
+      <section className="lists">
+        {movieList.map((item, key) => (
+          <div>
+            {item.title}
+          </div>
+        ))}
+      </section>
     </div>
-  )
+  );
 }
