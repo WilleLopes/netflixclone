@@ -16,7 +16,7 @@ export default () => {
     }
     loadAll();
   },[])
-console.log(movieList)
+
   return (
     <div className="page">
       <section className="lists">
