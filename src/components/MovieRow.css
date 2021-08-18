@@ -9,11 +9,11 @@
     padding-left: 30px;
 }
 .movieRow--list {
-    width: 3040px;
+    transition : all ease 0.5s;
 }
 .movieRow--item {
     display: inline-block;
-    width: 250px;
+    width: 150px;
     cursor: pointer;
 }
 .movieRow--item img {
@@ -51,3 +51,9 @@
 .movieRow:hover .movieRow-right{
    opacity: 1;
 }
+/* @media (max-width: 760px){
+    .movieRow-left,
+    .movieRow-right {
+    opacity: 1;
+    }
+} */
