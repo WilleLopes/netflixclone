@@ -66,7 +66,13 @@ export default () => {
         Feito em Live (https://www.youtube.com/watch?v=tBweoUiMsDg) para estudo de react, todos os direitos das imagens são da Netflix.
         Dados Extraidos de https://www.themoviedb.org/
       </footer>
-      
+
+      {movieList.length <= 0 &&
+      <div className="loading">
+        <img src="https://cdn.lowgif.com/small/0534e2a412eeb281-the-counterintuitive-tech-behind-netflix-s-worldwide.gif" alt="loading"></img>
+      </div>
+    }
+
     </div>
   );
 }

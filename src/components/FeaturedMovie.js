@@ -9,6 +9,11 @@ export default ({ item }) => {
     for (let i in item.genres) {
         genres.push(item.genres[i].name);
     }
+    
+    let descr = item.overview;
+    if(descr.length > 200){
+        descr = descr.substring(0, 200)  + '...';
+     }
 
     return (
         <section className="featured" style={{
