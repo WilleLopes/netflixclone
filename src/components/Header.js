@@ -3,7 +3,7 @@ import './Header.css';
 
 export default ({black})=>{
     return(
-        <header className={black ?"black" : ''}>
+        <header className={black ? "black" : ''}>
             <div className="header--logo">
                 <img src="https://img.elo7.com.br/product/original/2F57C45/poster-impresso-netflix-logo-basquete.jpg"/>
             </div>

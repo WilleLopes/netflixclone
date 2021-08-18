@@ -13,15 +13,17 @@ header{
     transition:  all ease 0.5s;
 }
 header.black{
-    background:#141414;  
+    background:#141414; 
+    height: 100px; 
 }
 .header--logo{
-    height: 130px;    
+    height: 100px;
+    background: transparent;    
 }
 
 .header--logo img{
     height: 100%;
-    /* background: transparent; */
+    background: transparent;
 }
 
 .header--user{

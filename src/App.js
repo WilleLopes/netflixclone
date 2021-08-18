@@ -9,6 +9,7 @@ export default () => {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader,  setBlackHeader] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -31,9 +32,25 @@ export default () => {
     loadAll();
   }, [])
 
+  useEffect(()=>{
+    const scrollListener = () =>{
+        if(window.scrollY > 10){
+          setBlackHeader(true);
+        }else{
+          setBlackHeader(false);
+        }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return () =>{
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
   return (
     <div className="page">
-      <Header />
+      <Header black={blackHeader} />
 
      {featuredData &&
       <FeaturedMovie  item={featuredData} />
@@ -44,6 +61,12 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        Feito em Live (https://www.youtube.com/watch?v=tBweoUiMsDg) para estudo de react, todos os direitos das imagens são da Netflix.
+        Dados Extraidos de https://www.themoviedb.org/
+      </footer>
+      
     </div>
   );
 }
